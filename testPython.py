@@ -1,3 +1,6 @@
-a = float(input('veuillez saisir la valeur de a:'))
-b = a * 12
-print('le message est: ', a, " ", b )
+l = int(input("ligne: "))
+c = int(input("colones: "))
+for lin in range(l):
+    for col in range(c):
+        print("*", end=" ")
+    print()
