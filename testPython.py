@@ -1,15 +1,15 @@
-nbreVie = 7
-mot = ["p","y","t","h","o","n"]
-# mot = "python"
-trouver = ["*","*","*","*","*","*"]
+list_1 = [-1, 2, 6, -10, 50, 100, 4, -20]
 
-while nbreVie > 0 :
-    letter = input("Entre une lettre : ")
-    if letter in mot:
-        index = mot.index(letter)
-        trouver[index] = letter
-        print(trouver)
-    else:
-        nbreVie -= 1
-        print("La lettre ",letter, " n'existe pas dans le mot, il vous reste ", nbreVie, " tentative(s)")
-print("Game Over")
+classeur1  = {
+    "positif": [],
+    "negatif": []
+}
+def trier(classeur, nombres):
+    for nombre in nombres :
+        if nombre >=0 :
+            classeur["positif"].append(nombre) 
+        else: 
+            classeur["negatif"].append(nombre)
+    return classeur
+
+print(trier(classeur1, list_1))
