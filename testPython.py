@@ -1,7 +1,44 @@
-prenoms = ["Pierre", "Jean", "Monique"]
-age = [30, 35, 60]
-dico = {k:v for k,v in enumerate(prenoms)}
-dico_1 = {k:v for k,v in zip(prenoms, age) if v > 32 } #if ajoute une condition
+import numpy as np
 
-print(dico)
-print(dico_1)
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+print(a + b) # [5 7 9]
+
+c = np.zeros((6, 2))
+print(c) # [[0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.]]
+
+d = np.ones((6, 2))
+print(d) # [[1. 1.] [1. 1.] [1. 1.] [1. 1.] [1. 1.] [1. 1.]]
+
+e = np.empty((6, 2))
+print(e) # [[0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.]]
+
+f = np.arange(12).reshape(3, 4)
+print(f) # [[ 0  1  2  3]
+    #  [ 4  5  6  7]
+    #  [ 8  9 10 11]]
+
+x = f.T
+print(x) # [[ 0  4  8]
+    #  [ 1  5  9]
+    #  [ 2  6 10] Transpose
+
+g = np.linspace(0, 20, 5)
+print(g) # [ 0.  5. 10. 15. 20.]
+
+h = np.random.random((3, 4))
+print(h) # [[0.824 0.075 0.567 0.403]
+    #  [0.064 0.234 0.789 0.789]
+    #  [0.064 0.234 0.789 0.789]]
+
+i = np.random.randint(0, 10, (3, 4))
+print(i) # [[0 0 0 0]
+    #  [0 0 0 0]
+    #  [0 0 0 0]]
+
+j = np.random.normal(0, 1, (3, 4))
+print(j) # [[-0.000 0.000 0.000 0.000]
+    #  [0.000 0.000 0.000 0.000]
+    #  [0.000 0.000 0.000 0.000]]
+
+
