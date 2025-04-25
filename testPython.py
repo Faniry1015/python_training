@@ -1,44 +1,24 @@
 import numpy as np
 
-a = np.array([1, 2, 3])
-b = np.array([4, 5, 6])
-print(a + b) # [5 7 9]
+a = np.array([1,2,3, -2, 6, -10])
+print(a.mean()) # moyenne
+print(a.std()) # ecart type
+print(a.var()) # variance
+print(a.min()) # minimum
+print(a.max()) # maximum
+print(a.sum()) # somme
+print(a.prod()) # produit
+print(a.cumsum()) # somme cumulee
 
-c = np.zeros((6, 2))
-print(c) # [[0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.]]
+print(a[2:4]) # selection de 2 a 4
+print(a[2:]) # selection de 2 a la fin
+print(a[:4]) # selection de debut a 4
+print(a[::-1]) # selection inversee
+print(a[2:4:2]) # selection de 2 a 4 avec pas de 2
 
-d = np.ones((6, 2))
-print(d) # [[1. 1.] [1. 1.] [1. 1.] [1. 1.] [1. 1.] [1. 1.]]
+print(a[a>5]) # selection des valeurs superieur a 5
+a[2] = 100 # modification de la valeur a l'index 2
+a[a<0] = 0 # modification des valeurs inferieur a 0 par 0
 
-e = np.empty((6, 2))
-print(e) # [[0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.] [0. 0.]]
-
-f = np.arange(12).reshape(3, 4)
-print(f) # [[ 0  1  2  3]
-    #  [ 4  5  6  7]
-    #  [ 8  9 10 11]]
-
-x = f.T
-print(x) # [[ 0  4  8]
-    #  [ 1  5  9]
-    #  [ 2  6 10] Transpose
-
-g = np.linspace(0, 20, 5)
-print(g) # [ 0.  5. 10. 15. 20.]
-
-h = np.random.random((3, 4))
-print(h) # [[0.824 0.075 0.567 0.403]
-    #  [0.064 0.234 0.789 0.789]
-    #  [0.064 0.234 0.789 0.789]]
-
-i = np.random.randint(0, 10, (3, 4))
-print(i) # [[0 0 0 0]
-    #  [0 0 0 0]
-    #  [0 0 0 0]]
-
-j = np.random.normal(0, 1, (3, 4))
-print(j) # [[-0.000 0.000 0.000 0.000]
-    #  [0.000 0.000 0.000 0.000]
-    #  [0.000 0.000 0.000 0.000]]
 
 
