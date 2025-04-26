@@ -1,4 +1,4 @@
-import numpy as np
+import numpy_test as np
 
 a = np.array([1,2,3, -2, 6, -10])
 print(a.mean()) # moyenne
