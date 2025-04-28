@@ -9,5 +9,5 @@ data = pd.merge(achat, client) # merge les deux tableaux il reconnait directemen
 print(data[['client_nom', 'article_num', 'article_nbre']]) 
 print(data.groupby('client_nom').sum('article_nbre')['article_num'])
 
-data2 = pd.merge(achat, client, how='inner', on='client_id') #merge par défaut : Jointure interne : Inner ; il y a 'left' et 'right' aussi
+data2 = pd.merge(achat, client, how='inner', on='client_id') #merge par défaut : Jointure interne : Inner ; il y a 'left' et 'right', 'outer' jointure externe qui conserve toutes les lignes des deux sources aussi
 print(data2)
