@@ -1,4 +1,9 @@
-with open(r'spam.bin', 'bw') as f:
-    for i in range(10):
-        f.write(b'\x3d')
+a = 6
+b = 12
+
+def multiply(x, y):
+    return x * y
+
+result = multiply(a, b)
+print("The result is:", result)
         
